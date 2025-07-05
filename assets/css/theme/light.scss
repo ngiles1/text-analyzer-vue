@@ -1,0 +1,16 @@
+.light-mode {
+  body {
+    background: #fff url('/assets/images/bg-light-theme.png');
+    color: #12131a;
+  }
+
+  textarea {
+    color: #2a2b37;
+    background-color: #f2f2f7;
+    border: 1px solid #e4e4ef;
+  }
+
+  .see-more-btn {
+    color: #12131a;
+  }
+}

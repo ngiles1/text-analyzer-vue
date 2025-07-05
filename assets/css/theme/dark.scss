@@ -1,0 +1,20 @@
+.dark-mode {
+  body {
+    background: #12131a url('/assets/images/bg-dark-theme.png');
+    color: #f2f2f7;
+  }
+
+  textarea {
+    color: #e4e4ef;
+    background-color: #2a2b37;
+    border: 1px solid #404254;
+  }
+
+  .stats {
+    color: #2a2b37;
+  }
+
+  .see-more-btn {
+    color: #f2f2f7;
+  }
+}
