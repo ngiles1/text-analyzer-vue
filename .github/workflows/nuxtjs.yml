@@ -14,9 +14,9 @@ jobs:
         with:
           node-version: "20"
       - run: npm install
-      - env:
-          NUXT_APP_BASE_URL: /text-analyzer-vue/
       - run: npx nuxt build --preset github_pages
+        env:
+          NUXT_APP_BASE_URL: /text-analyzer-vue/
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
