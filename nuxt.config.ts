@@ -19,6 +19,11 @@ export default defineNuxtConfig({
     ]
   },
   app: {
-    baseURL: '/text-analyzer-vue'
+    baseURL: '/text-analyzer-vue',
+    head: {
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '~/favicon.ico' },
+      ]
+    }
   }
 })
