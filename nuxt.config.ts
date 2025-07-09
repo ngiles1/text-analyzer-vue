@@ -17,5 +17,8 @@ export default defineNuxtConfig({
     families: [
       { name: 'DM Sans', provider: 'google' },
     ]
+  },
+  app: {
+    baseURL: '/text-analyzer-vue'
   }
 })

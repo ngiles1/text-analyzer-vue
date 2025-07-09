@@ -1,5 +1,8 @@
 <script setup lang="ts">
-const colorMode = useColorMode();
+const colorMode = useColorMode()
+
+const baseURL = useRuntimeConfig().app.baseURL
+provide('baseURL', baseURL)
 
 const spacesExcluded: Ref<boolean> = ref(false)
 
@@ -91,14 +94,14 @@ const sentences: ComputedRef<string[]> = computed(() => {
     <div class="container">
       <header>
         <img
-          src="/assets/images/logo-dark-theme.svg"
+          :src="`${baseURL}/assets/images/logo-dark-theme.svg`"
           alt="Logo"
           width="251"
           height="40"
           v-if="$colorMode.preference === 'dark'"
         >
         <img
-          src="/assets/images/logo-light-theme.svg"
+          :src="`${baseURL}/assets/images/logo-light-theme.svg`"
           alt="Logo"
           width="251"
           height="40"
@@ -125,17 +128,17 @@ const sentences: ComputedRef<string[]> = computed(() => {
       <section>
         <div class="stats">
           <Stat
-            :bg="`#d3a0fa url('/assets/images/pattern-character-count.svg') no-repeat center left+130%/55%`"
+            :bg="`#d3a0fa url('${baseURL}/assets/images/pattern-character-count.svg') no-repeat center left+130%/55%`"
             :label="'Total Characters'"
             :number="charCount"
           />
           <Stat
-            :bg="`#ff9f00 url('/assets/images/pattern-word-count.svg') no-repeat center left+130%/55%`"
+            :bg="`#ff9f00 url('${baseURL}/assets/images/pattern-word-count.svg') no-repeat center left+130%/55%`"
             :label="'Word Count'"
             :number="words.length"
           />
           <Stat
-            :bg="`#fe8159 url('/assets/images/pattern-sentence-count.svg') no-repeat center left+130%/55%`"
+            :bg="`#fe8159 url('${baseURL}/assets/images/pattern-sentence-count.svg') no-repeat center left+130%/55%`"
             :label="'Sentence Count'"
             :number="sentences.length"
           />

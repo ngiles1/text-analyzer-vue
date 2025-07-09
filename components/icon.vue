@@ -18,7 +18,7 @@ const { icon, ariaHidden = true, focusable = "false", viewBox, height = '1em' } 
   :viewBox="viewBox"
   :style="`height: ${height};`"
 >
-  <use :href="`/assets/images/icons.svg#${icon}`"></use>
+  <use :href="`${useRuntimeConfig().app.baseURL}/assets/images/icons.svg#${icon}`"></use>
 </svg>
 </template>
 
